@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys:
-          - dotnet-packages-v1-{{ checksum "AppShell.csproj" }}
+          keys:
+            - dotnet-packages-v1-{{ checksum "AppShell.csproj" }}
       - run:
           name: "Install project dependencies"
           command: dotnet.exe restore
@@ -19,7 +19,7 @@ jobs:
             - C:\Users\circleci\.nuget\packages
           key: dotnet-packages-v1-{{ checksum "AppShell.csproj" }}
       - run:
-        name: "Run Build step"
-        command: dotnet.exe publish -c Release -r win10-x64
+          name: "Run Build step"
+          command: dotnet.exe publish -c Release -r win10-x64
       - store_artifacts:
           path: .\bin\Release\netcoreapp2.1\win10-x64\publish\circleci-demo-windows.exe
