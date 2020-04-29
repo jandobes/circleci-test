@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  win: circleci/windows@1.0.0
+  win: circleci/windows@2.2.0
 jobs:
   build:
     executor:
@@ -16,13 +16,13 @@ jobs:
           command: dotnet.exe restore
       - run:
           name: "List current directory"
-          command: ls -l
+          command: dir
       - run:
           name: "Change to directory with project"
           command: cd AppShell
       - run:
           name: "List current directory"
-          command: ls -l
+          command: dir
       - save_cache:
           paths:
             - C:\Users\circleci\.nuget\packages
