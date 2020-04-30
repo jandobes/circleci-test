@@ -2,6 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    machine: false
+    docker:
+      - image: circleci/windows@2.2.0
     steps:
       - checkout
