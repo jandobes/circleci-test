@@ -1,8 +1,8 @@
 version: 2.1
 
 jobs:
-  one:
+  build:
     docker:
-      - image: circleci/windows:1.0.0
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
