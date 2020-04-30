@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/windows@2.2.0
+    steps:
+    - checkout
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
+
+# Original config.yml file:
+# version: 2.1
+# 
+# jobs:
+#   build:
+#     docker:
+#       - image: circleci/windows@2.2.0
+#     steps:
+#       - checkout
