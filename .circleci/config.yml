@@ -6,4 +6,4 @@ jobs:
       - image: mcr.microsoft.com/dotnet/core/sdk:3.1
     steps:
       - checkout
-      - run: echo "hello world"
+      - run: dotnet --info
